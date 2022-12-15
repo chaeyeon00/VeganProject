@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title> 비건 성분 확인 </title>
+  </head>
+  <body>
+  <script language="javascript">
+    function showPopup() {
+     window.open("{%url 'example' %}", "채식 7단계 설명", "width=600, height=600, left=100, top=50");
+   }
+  </script>
+    <div>
+      <br>
+      <h1 align="center"> 비건 성분 확인 </h1>
+      <br>
+      <div class = "botoom" align="center">
+        <input class="btn btn-info btn-lg " type="button" value="채식주의자 7단계설명" onclick="showPopup();" />
+        <button class="btn btn-success btn-lg"  onclick="location.href=' {% url 'upload' %}'">제품 불러오기</button>
+        <button class="btn btn-primary btn-lg" onclick="location.href=' {% url 'webcam' %}'">원재료성분표 찍기</button>
+      </div>
+      <div align="center">
+        <br>
+         <h2>이미지 업로드 예시</h2>
+        <img src="/media/icon/sampleImage.jpeg" style="width:30%; height:30%;">
+      </div>
+    </div>
+  </body>
+</html>

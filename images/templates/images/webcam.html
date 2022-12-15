@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title> 원재료성분표 찍기 </title>
+  </head>
+<script type="text/javascript">
+    function saveCam() {
+        document.getElementById("imgId").src = "";
+        window.location.href= '{%url 'save_cam' %}';
+    }
+
+</script>
+  <body>
+    <div>
+        <h1 align="center"> 원재료성분표 찍기 </h1>
+            <div class = "botoom" align="center">
+                <div style="margin-bottom:3px;padding-top: 3px">
+                  <img src = "{% url 'video_feed' %}" id="imgId" name="file">
+                </div>
+                <div style="margin-top:3px;padding-top: 3px">
+                   <button class="btn btn-primary btn-lg" onclick="saveCam()">사진촬영</button>
+                </div>
+            </div>
+    </div>
+  </body>
+</html>
